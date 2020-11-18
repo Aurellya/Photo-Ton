@@ -16,6 +16,13 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
+# font-awesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
+# jquery
+gem 'jquery-rails', '~> 4.4'
+
 # postgres db support
 # gem 'pg', '~> 1.2', '>= 1.2.3'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
