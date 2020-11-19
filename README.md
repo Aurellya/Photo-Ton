@@ -1,6 +1,6 @@
 # PHOTO-TON
 
-A Photo Sharing Web-app similar to Instagram. <br/>
+A Photo Sharing Web-app similar to Instagram. User can Sign In using Facebook account.<br/>
 Will migrate the database to postgres later.<br/>
 Status: [Not finished Yet :)]
 
