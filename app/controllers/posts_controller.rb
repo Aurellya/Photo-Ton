@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
     def show
         @comment = Comment.new
+        @comment = Comment.includes(:account).where(post_id: @post.id)
     end
 
     private

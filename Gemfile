@@ -12,6 +12,7 @@ gem 'puma', '~> 4.1'
 
 # User authentication
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'omniauth-facebook', '~> 8.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'

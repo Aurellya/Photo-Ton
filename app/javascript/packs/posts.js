@@ -1,5 +1,9 @@
 $(function () {
   // jquery loaded
+  $("#post-comment").on("click", function () {
+    $("#comment_comment").focus();
+  });
+
   $(".post-like").on("click", function () {
     console.log("hi");
     var post_id = $(this).data("id");

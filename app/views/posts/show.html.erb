@@ -14,7 +14,7 @@
             <div class="post-details">
                  <div class="comments-feed">
                     <%= simple_format @post.description %>
-                    <%= render "posts/comments", post: @post %>
+                    <%= render "posts/comments", post: @post, comments: @comments %>
                 </div> 
 
                 <div class="post-actions">
@@ -23,20 +23,18 @@
                         data-id="<%= @post.id %>">
                     </i>
 
-                    <i class="fa fa-comment fa-2x post-comment"></i>
+                    <i class="fa fa-comment fa-2x post-comment" id="post-comment"></i>
                 </div>
 
                 <p><strong id="post-<%= @post.id %>-likes"><%= @post.total_likes_count %> likes</strong></p>
-                <p><strong id="post-<%= @post.id %>-comments">
-                    <%= link_to @post.account.username , profile_path(@post.account.username), class:"text-dark"%> 
-                </p></strong>
-
+                
                 <p class="text-muted"><%= time_ago_in_words(@post.created_at).gsub('about','')  %> ago</p>
             </div>
 
             <div class="comment-box">
                 <%= form_for @comment do |f| %>
                     <%= f.hidden_field :post_id, value: @post.id %>
+                    <%= f.hidden_field :return_to, value:"post" %>
                     <div class="input-group">
                         <%= f.text_field :comment, placeholder: "Add comment here...", class:"form-control post-comment" %>
                         <div class="input-group-append">
