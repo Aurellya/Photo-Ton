@@ -15,4 +15,12 @@ Rails.application.routes.draw do
 
   root to: "public#homepage"
 
+  # unauthenticated :user do
+  #   root to: "public#homepage"
+  # end
+
+  # authenticated :user do
+  #   root to: "accounts#index"
+  # end
+  
 end
