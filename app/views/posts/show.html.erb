@@ -31,7 +31,14 @@
                     <i class="fa fa-comment fa-2x post-comment" id="post-comment"></i>
                 </div>
 
-                <p><strong id="post-<%= @post.id %>-likes"><%= @post.total_likes_count %> likes</strong></p>
+                <p><strong id="post-<%= @post.id %>-likes">
+                <%# <%= @post.total_likes_count %>  <%#likes %>
+                <% if @post.total_likes_count == nil %> 
+                    0 likes
+                <% else %>
+                    <%= @post.total_likes_count %> likes 
+                <% end %>
+                </strong></p>
                 
                 <p class="text-muted"><%= time_ago_in_words(@post.created_at).gsub('about','')  %> ago</p>
             </div>
