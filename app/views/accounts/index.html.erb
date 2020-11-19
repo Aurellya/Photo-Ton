@@ -4,11 +4,15 @@
             <% @posts.each do |post| %>
                 <div class="insta-post">
                     <div class="post-meta">
-                        <%= link_to image_tag(post.account.image.thumb.url, class: "img-circle"), profile_path(post.account.username) %>
+                        <% if post.account.image.thumb.url %>
+                            <%= link_to profile_picture(post.account, 40), profile_path(post.account.username) %>
+                        <% else %>
+                             <%= link_to profile_picture(post.account, 40), profile_path(post.account.username) %>
+                        <% end %>
                         <%= link_to post.account.username, profile_path(post.account.username), class:"text-dark" %>
                     </div>
 
-                    <%= image_tag post.image.url, class: "img img-fluid"%>         
+                    <%= image_tag post.image.url, class: "img img-fluid w-100"%>         
 
                     <div class="post-details">
                          <div class="post-actions">
@@ -48,6 +52,7 @@
             <% end %>
         </div>
         <div class="col-4">
+        <div class="position-fixed"> 
             <div class="account-summary">
                 <p class="m-0"> 
                     <%= link_to image_tag(current_account.image.thumb.url, class: "img-circle float-left m-r-15"), profile_path(current_account.username) if current_account.image.present? %>
@@ -61,6 +66,7 @@
 
                 <%= render "accounts/follower_suggestions" %>
             </div>
+        </div>
         </div>
     </div>
 </div>
