@@ -1,46 +1,45 @@
 <div class="container">
-<div class="row">
-<div class="col-4">
-    <%= profile_picture @account, 200 %>
-</div>
-<div class="col-8 text-left">
     <div class="row">
-    <h1 class="my-auto"><%= @account.full_name %></h1>
-    <div class="col">
-    </div>
-    <div class="col my-auto">
-        <%= link_to "Edit Profile", edit_account_registration_path, class: "btn btn-secondary" if can_edit_profile?(@account.id) %>
-    </div>
-    </div>
-
-    <hr/>
-
-    <div class="row profile-stats">
         <div class="col-4">
-            <%= @account.posts.count %> posts
+            <%= profile_picture @account, 200 %>
         </div>
-        <div class="col-4">
-            <%= @account.total_followers %> following
-        </div>
-        <div class="col-4">
-            <%= @account.total_following %> followers
+
+        <div class="col-8 text-left">
+            <div class="row">
+            <div class="col-6">
+                <%= link_to "Edit Profile", edit_account_registration_path, class: "btn btn-muted btn-custom float-right" if can_edit_profile?(@account.id) %>
+                <h1><%= @account.full_name %></h1>
+            </div>
+            </div>
+
+            <hr/>
+
+            <div class="row profile-stats">
+                <div class="col-4">
+                    <%= @account.posts.count %> posts
+                </div>
+                <div class="col-4">
+                    <%= @account.total_followers %> following
+                </div>
+                <div class="col-4">
+                    <%= @account.total_following %> followers
+                </div>
+            </div>
+
+            <p><%= @account.full_name %></p>
+            <%= simple_format @account.description %>
+            <p><%= link_to @account.website if @account.website.present? %></p>
         </div>
     </div>
 
-    <p><%= @account.full_name %></p>
-    <%= simple_format @account.description %>
-    <p><%= link_to @account.website if @account.website.present? %></p>
-</div>
-</div>
-
-<div class="row profile-posts">
-<% @posts.each do |post| %>
-    <div class="col-4">
-        <div class="insta-post">
-            <%= image_tag post.image.url, class: "img img-fluid"%>
-        </div>
+    <div class="row profile-posts">
+        <% @posts.each do |post| %>
+            <div class="col-4">
+                <div class="insta-post">
+                    <%= image_tag post.image.url, class: "img img-fluid"%>
+                </div>
+            </div>
+        <% end %>
     </div>
-<% end %>
-</div>
 </div>
 

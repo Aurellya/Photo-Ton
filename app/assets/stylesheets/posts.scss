@@ -34,3 +34,28 @@
     color: #555;
   }
 }
+
+.comment-box {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.post-comment:focus {
+  box-shadow: none !important;
+}
+
+.comments-feed {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.comments-feed::-webkit-scrollbar {
+  width: 0;
+}
+
+.post-details .post-actions {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
