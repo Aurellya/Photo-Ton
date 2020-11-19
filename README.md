@@ -1,7 +1,8 @@
 # PHOTO-TON
 
 A Photo Sharing Web-app similar to Instagram. <br/>
-Will migrate the database to postgres later.
+Will migrate the database to postgres later.<br/>
+Status: [Not finished Yet :)]
 
 # README
 
