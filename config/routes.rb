@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # dashboard
   get "/dashboard" => "accounts#index"
+
   get "profile/:username" => "accounts#profile", as: :profile
   get "post/like/:post_id" => "likes#save_like", as: :like_post
 
@@ -14,6 +15,10 @@ Rails.application.routes.draw do
   resources :comments, only: [:create]
 
   root to: "public#homepage"
+
+  get "/about" => "public#about"
+  get "/services" => "public#services"
+  get "/contact" => "public#contact"
 
   # unauthenticated :user do
   #   root to: "public#homepage"
