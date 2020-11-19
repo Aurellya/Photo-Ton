@@ -63,12 +63,12 @@
             <div class="account-summary">
                 <p class="m-0"> 
                     <div class="row pl-1">
-                        <div class="col-3">
+                        <div class="col-2 mr-2">
                             <%= link_to profile_picture(current_account, 50), profile_path(current_account.username) if current_account.image.present? %>
                             <%= link_to profile_picture(current_account, 50), profile_path(current_account.username) if !current_account.image.present? %>
                         </div>
                         <div class="col-md-auto">
-                            <strong><%= current_account.username %></strong><br/>
+                            <strong><%= link_to current_account.username, profile_path(current_account.username), class:"text-dark" %></strong><br/>
                             <%= current_account.full_name %>
                         </div>
                         <div class="col">

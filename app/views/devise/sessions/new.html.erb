@@ -4,12 +4,12 @@
   </div>
   <div class="card-body">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form-group'}) do |f| %>
-      <div class="field">
+      <div class="field form-group">
         <%= f.label :email %><br />
         <%= f.email_field :email, class:"form-control", autofocus: true, autocomplete: "email" %>
       </div>
 
-      <div class="field">
+      <div class="field form-group">
         <%= f.label :password %><br />
         <%= f.password_field :password, class:"form-control", autocomplete: "current-password" %>
       </div>

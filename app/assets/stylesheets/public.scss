@@ -6,3 +6,13 @@
   margin-bottom: 30px;
   border-bottom: 1px solid #ddd;
 }
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #424242 !important;
+}
+
+.out {
+  // background-color: blue !important;
+  outline: none !important;
+}
