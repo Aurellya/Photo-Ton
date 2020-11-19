@@ -1,8 +1,12 @@
 
 <div class="text-center">
-<h1 class="mt-5">Welcome to Instagram</h1>
-<p class="lead">Please register or sign in to continue.</p>
+    <h1 class="mt-5">Welcome to Instagram</h1>
+    <p class="lead">Please register or sign in to continue.</p>
 
-<%= link_to "Sign Up", new_account_registration_path, class:"btn btn-success" %>
-<%= link_to "Sign In", new_account_session_path, class:"btn btn-secondary" %>
+    <%= link_to "Sign Up", new_account_registration_path, class:"btn btn-success" %>
+    <%= link_to "Sign In", new_account_session_path, class:"btn btn-secondary" %>
+
+    <%# <br/> <br/> %>
+ 
+    <%= link_to "Sign In with Facebook", account_facebook_omniauth_authorize_path, class:"btn btn-info" %>
 </div>
