@@ -42,8 +42,19 @@
                     <%= link_to post_path(post) do %> 
                         <div class="post-stats">
                             <div class="inner">
-                                <i class="fa fa-heart"></i> <%= post.total_likes_count %> 
-                                <i class="fa fa-comment m-l-15"></i> <%= post.total_comments_count %> 
+                                <i class="fa fa-heart"></i> 
+                                 <% if post.total_likes_count == nil %> 
+                                    0
+                                <% else %>
+                                    <%= post.total_likes_count %>
+                                <% end %>
+
+                                <i class="fa fa-comment m-l-15"></i>  
+                                <% if post.total_comments_count == nil %> 
+                                    0
+                                <% else %>
+                                    <%= post.total_comments_count %>
+                                <% end %>
                             </div>
                         </div>
                     <% end %>
