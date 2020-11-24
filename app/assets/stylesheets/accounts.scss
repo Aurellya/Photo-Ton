@@ -18,6 +18,15 @@ body {
   border-radius: 3px;
 }
 
+.fs-2 {
+  padding: 30px 50px;
+}
+
+.tm-2 {
+  font-size: 20px;
+  // padding-bottom: 2px;
+}
+
 .img-circle {
   border-radius: 50%;
 }
@@ -57,7 +66,11 @@ body {
 
 .searchbar {
   margin: auto !important;
-  width: fit-content;
+  // width: fit-content;
+
+  .form-control {
+    width: 76% !important;
+  }
 }
 
 .m-r-15 {

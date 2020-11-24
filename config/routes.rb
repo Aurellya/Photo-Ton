@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post "follow/account" => "accounts#follow_account", as: :follow_account
 
+  get "/all_accounts" => "accounts#all_accounts"
+
   resources :posts, only: [:new, :create, :show]
   resources :comments, only: [:create]
 
